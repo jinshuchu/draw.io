@@ -1,11 +1,14 @@
-<mxfile host="app.diagrams.net" modified="2023-01-05T08:24:53.607Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" version="20.8.1" etag="GUmgorjTjy4_N5ghFnc_" type="github">
+<mxfile host="app.diagrams.net" modified="2023-01-05T09:02:21.113Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" version="20.8.1" etag="ZXr49THNRXkvTgYG6aPO" type="github">
   <diagram id="3NPX3qVhBjHvH_hVxfSy" name="第 1 页">
     <mxGraphModel dx="1114" dy="584" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="xeI6-ETJLODEHL3FSiSU-1" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="80" y="200" width="120" height="60" as="geometry" />
+        <mxCell id="xeI6-ETJLODEHL3FSiSU-1" value="1、谈谈你对SpringIOC的理解，原理与实现" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="220" width="370" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="xeI6-ETJLODEHL3FSiSU-3" value="&lt;b&gt;总：&lt;br&gt;&lt;/b&gt;&lt;br&gt;控制反转：理论思想，原来的对象是由使用者来进行控制，有了spring之后，可以把整个对象交给spring来帮我们进行管理。&lt;br&gt;&lt;br&gt;DI：依赖注入，把对应的属性值注入到具体的对象中，@Autowired,PopulateBean完成属性值的注入。&lt;br&gt;&lt;br&gt;容器：存储对象，使用map结构来存储，在spring中一般存在&lt;font color=&quot;#cd2d2d&quot;&gt;&lt;b&gt;三级缓存&lt;/b&gt;&lt;/font&gt;，singletonObject存放完整的Bean对象，整个Bean的生&lt;br&gt;&lt;br&gt;命周期从创建到使用到销毁的过程全部都是由容器来管理。（&lt;font color=&quot;#ff213f&quot;&gt;&lt;b&gt;bean的生命周期&lt;/b&gt;&lt;/font&gt;）&lt;br&gt;&lt;br&gt;&lt;b&gt;分：&lt;/b&gt;&lt;br&gt;&lt;br&gt;1、一般聊IOC容器的时候要涉及到容器的创建过程（beanFactory,DefaultListableBeanFactory）,向bean工厂中设置一些参数（BeanPostProcessor,Aware接口的子类）等等属性&lt;br&gt;&lt;br&gt;2、加载解析bean对象，准备要创建的bean对象的定义对象beanDefinition（Xml或者注解的解析过程）&lt;br&gt;&lt;br&gt;3、beanFactoryPostProcessor的处理，此处是扩展点，PlaceHolderConfigSupport,ConfigurationClassPostProcessor&lt;br&gt;&lt;br&gt;4、BeanPostProcessor的注册功能，方便后续对bean对象完成具体的扩展功能。&lt;br&gt;&lt;br&gt;5、通过反射的方式将BeanDefinition对象实例化成具体的对象&lt;br&gt;&lt;br&gt;6、bean对象的初始话过程（填充属性，调用Aware子类的方法，调用BeanPostProcessor前置处理方法，调用init-method方法，调用BeanPostProcessor的后置处理方法）&lt;br&gt;&lt;br&gt;7、生成完整的bean对象，通过getBean方法可以直接获取&lt;br&gt;&lt;br&gt;8、销毁过程&lt;br&gt;&lt;br&gt;没看过源码怎么办？&lt;br&gt;&lt;br&gt;具体的细节我记不清了，但是spring中的beand都是通过反射的方式生成的，同时其中包含了很多的扩展点，比如最常用的对BeanFactory的扩展，对beand的扩展（对占位符的处理）我们在公司对这方面的使用时比较多的，除此之外，IOC中最核心的也就是填充具体bean的属性，和生命周期（背一下）" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+          <mxGeometry x="70" y="60" width="690" height="580" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
